@@ -1,3 +1,7 @@
+:root {
+    --h: 16;
+}
+
 html, body {
     height: 100%;
 }
@@ -8,17 +12,26 @@ body {
     align-items: center;
 }
 
+.metacontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 .container {
     height: 50%;
     width: 50%;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(var(--h), 1fr);
+    grid-template-rows: repeat(var(--h), 1fr);
+    gap: 0.1rem;
 }
 
 
 .grid-square {
-    background-color: #a189b8;
+    background-color: #dedbe0;
     border-radius: 2px;
 }
